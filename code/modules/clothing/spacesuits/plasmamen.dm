@@ -61,3 +61,66 @@
 	for(var/X in actions)
 		var/datum/action/A=X
 		A.UpdateButtonIcon()
+
+
+/obj/item/clothing/head/helmet/space/plasmaman/security
+	name = "security plasma envirosuit helmet"
+	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear. It is colored in Security's pattern, and come with light plating."
+	icon_state = "plasmaman-helm_security"
+	item_state = "plasmaman-helm_security"
+	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 0, "fire" = 100, "acid" = 75)
+
+/obj/item/clothing/head/helmet/space/plasmaman/medical
+	name = "medical plasma envirosuit helmet"
+	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear. It is colored in Medical's pattern."
+	icon_state = "plasmaman-helm_medical"
+	item_state = "plasmaman-helm_medical"
+
+/obj/item/clothing/head/helmet/space/plasmaman/viro
+	name = "viro plasma envirosuit helmet"
+	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear. It is colored in Virology's pattern."
+	icon_state = "plasmaman-helm_viro"
+	item_state = "plasmaman-helm_viro"
+
+/obj/item/clothing/head/helmet/space/plasmaman/science
+	name = "science plasma envirosuit helmet"
+	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear. It is colored in Science's pattern."
+	icon_state = "plasmaman-helm_science"
+	item_state = "plasmaman-helm_science"
+
+/obj/item/clothing/head/helmet/space/plasmaman/engineering
+	name = "engineering plasma envirosuit helmet"
+	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear. It is colored in Engineering's pattern, and comes equipped with some light radiation protection."
+	icon_state = "plasmaman-helm_engineering"
+	item_state = "plasmaman-helm_engineering"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 10, "fire" = 100, "acid" = 75)
+
+/obj/item/clothing/head/helmet/space/plasmaman/atmospherics
+	name = "atmospherics plasma envirosuit helmet"
+	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear. It is colored in Atmospherics's pattern."
+	icon_state = "plasmaman-helm_atmospherics"
+	item_state = "plasmaman-helm_atmospherics"
+
+/obj/item/clothing/head/helmet/space/plasmaman/cargo
+	name = "cargo plasma envirosuit helmet"
+	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear. It is colored in Cargo's pattern."
+	icon_state = "plasmaman-helm_cargo"
+	item_state = "plasmaman-helm_cargo"
+
+/obj/item/clothing/head/helmet/space/plasmaman/civilian
+	name = "civilian plasma envirosuit helmet"
+	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear. It is colored in a grey."
+	icon_state = "plasmaman-helm_civilian"
+	item_state = "plasmaman-helm_civilian"
+
+/obj/item/clothing/head/helmet/space/plasmaman/bar
+	name = "bartender's plasma envirosuit helmet"
+	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear."
+	icon_state = "plasmaman-helm_bar"
+	item_state = "plasmaman-helm_bar"
+
+/obj/item/clothing/head/helmet/space/plasmaman/chef
+	name = "chef's plasma envirosuit helmet"
+	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear. It is colored in white."
+	icon_state = "plasmaman-helm_chef"
+	item_state = "plasmaman-helm_chef"
