@@ -1,5 +1,5 @@
 /obj/item/clothing/under/plasmaman/security
-	name = "security plasma envirosuit
+	name = "security plasma envirosuit"
 	desc = "A special containment suit that allows plasma-based lifeforms to exist safely in an oxygenated environment, and automatically extinguishes them in a crisis. Despite being airtight, it's not spaceworthy. It is painted in the style of Security, and is outfitted with some light plating."
 	icon_state = "plasmaman_security"
 	item_state = "plasmaman_security"
