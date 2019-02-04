@@ -54,8 +54,40 @@
 	. = ..()
 
 /datum/species/plasmaman/before_equip_job(datum/job/J, mob/living/carbon/human/H, visualsOnly = FALSE)
-	var/datum/outfit/plasmaman/O = new /datum/outfit/plasmaman
-	H.equipOutfit(O, visualsOnly)
+	var/current_job = H.mind.assigned_role
+	var/assigned_outfit = /datum/outfit/plasmaman
+	switch(current_job)
+		if("Assistant")
+			assigned_outfit = /datum/outfit/job/plasmaman/assistant
+
+		if("Bartender")
+			assigned_outfit = /datum/outfit/job/plasmaman/bar
+
+		if("Chef")
+			assigned_outfit = /datum/outfit/job/plasmaman/chef
+
+		if("Security Officer")
+			assigned_outfit = /datum/outfit/job/plasmaman/security
+
+		if("Cargo Technician", "Quartermaster", "Shaft Miner")
+			assigned_outfit = /datum/outfit/job/plasmaman/cargo
+
+		if("Medical Doctor", "Chemist")
+			assigned_outfit = /datum/outfit/job/plasmaman/medical
+
+		if("Virologist")
+			assigned_outfit = /datum/outfit/job/plasmaman/viro
+
+		if("Scientist", "Roboticist", "Geneticist")
+			assigned_outfit = /datum/outfit/job/plasmaman/science
+
+		if("Station Engineer")
+			assigned_outfit = /datum/outfit/job/plasmaman/engineering
+
+		if("Atmospherics Technician")
+			assigned_outfit = /datum/outfit/job/plasmaman/atmospherics
+
+	H.equipOutfit(assigned_outfit)
 	H.internal = H.get_item_for_held_index(2)
 	H.update_internals_hud_icon(1)
 	return 0
