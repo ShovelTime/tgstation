@@ -110,9 +110,6 @@
 
 		if("Atmospherics Technician")
 			assigned_outfit = /datum/outfit/job/plasmaman/atmospherics
-
-		else
-			return
 	H.equipOutfit(assigned_outfit)
 	H.internal = H.get_item_for_held_index(2)
 	H.update_internals_hud_icon(1)
