@@ -57,8 +57,17 @@
 	var/current_job = H.mind.assigned_role
 	var/assigned_outfit = /datum/outfit/plasmaman
 	switch(current_job)
-		if("Assistant")
-			assigned_outfit = /datum/outfit/job/plasmaman/assistant
+		if("Chaplain")
+			assigned_outfit = /datum/outfit/job/plasmaman/chaplain
+
+		if("Curator")
+			assigned_outfit = /datum/outfit/job/plasmaman/curator
+
+		if("Janitor")
+			assigned_outfit = /datum/outfit/job/plasmaman/janitor
+
+		if("Botany")
+			assigned_outfit = /datum/outfit/job/plasmaman/botany
 
 		if("Bartender")
 			assigned_outfit = /datum/outfit/job/plasmaman/bar
@@ -69,16 +78,31 @@
 		if("Security Officer")
 			assigned_outfit = /datum/outfit/job/plasmaman/security
 
-		if("Cargo Technician", "Quartermaster", "Shaft Miner")
+		if("Warden")
+			assigned_outfit = /datum/outfit/job/plasmaman/warden
+
+		if("Cargo Technician", "Quartermaster")
 			assigned_outfit = /datum/outfit/job/plasmaman/cargo
 
-		if("Medical Doctor", "Chemist")
+		if("Shaft Miner")
+			assigned_outfit = /datum/outfit/job/plasmaman/mining
+
+		if("Medical Doctor")
 			assigned_outfit = /datum/outfit/job/plasmaman/medical
+
+		if("Chemist")
+			assigned_outfit = /datum/outfit/job/plasmaman/chemist
+
+		if("Geneticist")
+			assigned_outfit = /datum/outfit/job/plasmaman/genetics
+
+		if("Roboticist")
+			assigned_outfit = /datum/outfit/job/plasmaman/robotics
 
 		if("Virologist")
 			assigned_outfit = /datum/outfit/job/plasmaman/viro
 
-		if("Scientist", "Roboticist", "Geneticist")
+		if("Scientist")
 			assigned_outfit = /datum/outfit/job/plasmaman/science
 
 		if("Station Engineer")
@@ -87,6 +111,8 @@
 		if("Atmospherics Technician")
 			assigned_outfit = /datum/outfit/job/plasmaman/atmospherics
 
+		else
+			return
 	H.equipOutfit(assigned_outfit)
 	H.internal = H.get_item_for_held_index(2)
 	H.update_internals_hud_icon(1)
