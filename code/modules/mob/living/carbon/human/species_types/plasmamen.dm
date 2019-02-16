@@ -54,63 +54,63 @@
 	. = ..()
 
 /datum/species/plasmaman/before_equip_job(datum/job/J, mob/living/carbon/human/H, visualsOnly = FALSE)
-	var/current_job = H.mind.assigned_role
-	var/assigned_outfit = /datum/outfit/plasmaman
+	var/current_job = J.title
+	var/job_outfit = new /datum/outfit/plasmaman
 	switch(current_job)
 		if("Chaplain")
-			assigned_outfit = /datum/outfit/job/plasmaman/chaplain
+			job_outfit = new /datum/outfit/job/plasmaman/chaplain
 
 		if("Curator")
-			assigned_outfit = /datum/outfit/job/plasmaman/curator
+			job_outfit = new /datum/outfit/job/plasmaman/curator
 
 		if("Janitor")
-			assigned_outfit = /datum/outfit/job/plasmaman/janitor
+			job_outfit = new /datum/outfit/job/plasmaman/janitor
 
 		if("Botany")
-			assigned_outfit = /datum/outfit/job/plasmaman/botany
+			job_outfit = new /datum/outfit/job/plasmaman/botany
 
 		if("Bartender")
-			assigned_outfit = /datum/outfit/job/plasmaman/bar
+			job_outfit = new /datum/outfit/job/plasmaman/bar
 
 		if("Chef")
-			assigned_outfit = /datum/outfit/job/plasmaman/chef
+			job_outfit = new /datum/outfit/job/plasmaman/chef
 
 		if("Security Officer")
-			assigned_outfit = /datum/outfit/job/plasmaman/security
+			job_outfit = new /datum/outfit/job/plasmaman/security
 
 		if("Warden")
-			assigned_outfit = /datum/outfit/job/plasmaman/warden
+			job_outfit = new /datum/outfit/job/plasmaman/warden
 
 		if("Cargo Technician", "Quartermaster")
-			assigned_outfit = /datum/outfit/job/plasmaman/cargo
+			job_outfit = new /datum/outfit/job/plasmaman/cargo
 
 		if("Shaft Miner")
-			assigned_outfit = /datum/outfit/job/plasmaman/mining
+			job_outfit = new /datum/outfit/job/plasmaman/mining
 
 		if("Medical Doctor")
-			assigned_outfit = /datum/outfit/job/plasmaman/medical
+			job_outfit = new /datum/outfit/job/plasmaman/medical
 
 		if("Chemist")
-			assigned_outfit = /datum/outfit/job/plasmaman/chemist
+			job_outfit = new /datum/outfit/job/plasmaman/chemist
 
 		if("Geneticist")
-			assigned_outfit = /datum/outfit/job/plasmaman/genetics
+			job_outfit = new /datum/outfit/job/plasmaman/genetics
 
 		if("Roboticist")
-			assigned_outfit = /datum/outfit/job/plasmaman/robotics
+			job_outfit = new /datum/outfit/job/plasmaman/robotics
 
 		if("Virologist")
-			assigned_outfit = /datum/outfit/job/plasmaman/viro
+			job_outfit = new /datum/outfit/job/plasmaman/viro
 
 		if("Scientist")
-			assigned_outfit = /datum/outfit/job/plasmaman/science
+			job_outfit = new /datum/outfit/job/plasmaman/science
 
 		if("Station Engineer")
-			assigned_outfit = /datum/outfit/job/plasmaman/engineering
+			job_outfit = new /datum/outfit/job/plasmaman/engineering
 
 		if("Atmospherics Technician")
-			assigned_outfit = /datum/outfit/job/plasmaman/atmospherics
-	H.equipOutfit(assigned_outfit)
+			job_outfit = new /datum/outfit/job/plasmaman/atmospherics
+	H.equipOutfit(job_outfit, visualsOnly)
 	H.internal = H.get_item_for_held_index(2)
 	H.update_internals_hud_icon(1)
 	return 0
