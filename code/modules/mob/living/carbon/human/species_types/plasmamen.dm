@@ -54,7 +54,7 @@
 	. = ..()
 
 /datum/species/plasmaman/before_equip_job(datum/job/J, mob/living/carbon/human/H, visualsOnly = FALSE)
-	var/current_job = H.mind.assigned_role
+	var/current_job = J.title
 	var/assigned_outfit = /datum/outfit/plasmaman
 	switch(current_job)
 		if("Chaplain")
